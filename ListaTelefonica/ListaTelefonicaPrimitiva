@@ -1,0 +1,55 @@
+public class ListaTelefonicaPrimitiva
+{
+    Dictionary<string, string> lista = new Dictionary<string, string>();
+
+    public void inserir(string nome, string numero)
+    {
+
+        if (lista.ContainsKey(nome))
+        {
+            Console.WriteLine($"\no contato {nome} ja existe");
+        }
+        else
+        {
+            lista.Add(nome, numero);
+            Console.WriteLine($"contato {nome} add com sucesso");
+        }
+    }
+
+    public string BuscarNumero(string nome)
+    {
+        if (lista.ContainsKey(nome))
+        {
+
+            Console.WriteLine($"\nnumero encontrado com sucesso");
+            Console.WriteLine($"\t{nome}: {lista[nome]}");
+
+            return lista[nome];
+        }
+        else
+        {
+            Console.WriteLine($"\nnumero de {nome}, nao encontrado!!!");
+            return nome;
+        }
+
+    }
+
+    public void remover(string nome)
+    {
+        if (lista.ContainsKey(nome))
+        {
+            lista.Remove(nome);
+            Console.WriteLine($"\ncontato {nome} removido com sucesso");
+        }
+        else
+        {
+            Console.WriteLine($"\ncontato {nome} nao encontrado");
+        }
+    }
+
+    public void tamanho()
+    {
+        Console.WriteLine($"\ntotal de contatos: {lista.Count}");
+    }
+
+}
