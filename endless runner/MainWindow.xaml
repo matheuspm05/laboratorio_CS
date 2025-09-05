@@ -1,26 +1,24 @@
-﻿<Window x:Class="Endless_Runner_WPF_MOO_ICT.MainWindow"
+<Window x:Class="Endless_Runner_WPF_MOO_ICT.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Endless_Runner_WPF_MOO_ICT"
         mc:Ignorable="d"
-		
-        Title="Endless Runner Game MOO ICT" Height="560" Width="960">
-	
-    <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="LightBlue">
+        Title="Endless Runner Game MOO ICT" Height="500" Width="880">
 
-        <Rectangle Name="background" Height="400" Width="1262" Fill="Orange" Canvas.Left="0" />
-        <Rectangle Name="background2" Height="200" Width="1262" Fill="LightGreen" Canvas.Left="1262" />
+	<Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp="KeyIsUp" Background="#5a5142">
 
-        <Rectangle Name="ground" Height="10" Width="792" Fill="Black" Canvas.Top="350" Canvas.Left="0" />
+		<Rectangle Name="background" Height="490" Width="1262" Canvas.Left="0" />
+		<Rectangle Name="background2" Height="490" Width="1262" Canvas.Left="1262" />
 
-        <Rectangle Name="player" Height="99" Width="67" Fill="Brown" Canvas.Top="151" Canvas.Left="110" />
+		<Rectangle Name="ground" Height="5" Width="792" Canvas.Top="387" Canvas.Left="0" />
 
-        <Rectangle Name="obstacle" Height="220" Width="60" Fill="Red" Canvas.Top="320" Canvas.Left="721" />
+		<Rectangle Name="player" Height="120" Width="67" Fill="blue" Canvas.Top="151" Canvas.Left="110" />
+
+		<Rectangle Name="obstacle" Height="200" Width="50" Fill="Red" Canvas.Top="320" Canvas.Left="721" />
 
 		<Label Name="scoreText" FontSize="28" FontWeight="Bold" Width="800" HorizontalContentAlignment="Center" Content="Pontuação: 0  |  Tempo: 00:00" />
-        
 
-    </Canvas>
+	</Canvas>
 </Window>
